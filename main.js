@@ -63,16 +63,21 @@ function blocks(amount){
 blocks(8);  
 
 let block = document.querySelectorAll('.gridhost div');
+let blocker = document.querySelectorAll('.gridhost');
 
 let test = () => {
     for(let i = 0; i < block.length; i++) {
         block[i].remove(block[i]);
+    }
+    for(let i = 0; i < blocker.length; i++) {
+        blocker[i].remove(blocker[i]);
     }
 }   
 
 
 sixteen.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
+    blocker = document.querySelectorAll('.gridhost');
     test();
     for(let i = 0; i <= 8; i++){
         grid()
@@ -107,6 +112,7 @@ sixteen.addEventListener('click', () => {
 
 thirtytwo.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
+    blocker = document.querySelectorAll('.gridhost');
     test();
     for(let i = 0; i <= 16; i++){
         grid()
@@ -141,6 +147,7 @@ thirtytwo.addEventListener('click', () => {
 
 sixtyfour.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
+    blocker = document.querySelectorAll('.gridhost');
     test();
     for(let i = 0; i <= 32; i++){
         grid()
@@ -175,6 +182,7 @@ sixtyfour.addEventListener('click', () => {
 
 ninetysix.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
+    blocker = document.querySelectorAll('.gridhost');
     test();
     for(let i = 0; i <= 48; i++){
         grid()
@@ -419,16 +427,6 @@ color('black');
 
 /*
 
-add  a mouse down that starts the hover
-and then a mouseup that removes it
-
-add start color, provide instructions add color pallete
-add an button which they can press to change the amount of blocks
-
-fix size
-
-or while number <= 32
-
 first you want it to start by creating a div then
 create a number var that starts at zero
 create a while true, and in said while true 
@@ -450,4 +448,12 @@ all these will be appended to pagewrap which will have flex:column;
 add something to the name like + "e"
 
 create a function then insert these names
+
+add start color, provide instructions add color pallete
+add an button which they can press to change the amount of blocks
+
+
+add  a mouse down that starts the hover
+and then a mouseup that removes it
+
 */
