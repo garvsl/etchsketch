@@ -65,6 +65,13 @@ sixteen.addEventListener('click', () => {
     for(let i = 0; i <= 8; i++){
         grid()
     }
+    block = document.querySelectorAll('.gridhost div');
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mouseover', () => {
+            block[i].style.background = 'black';
+        });
+      }
+    
 })
 
 thirtytwo.addEventListener('click', () => {
@@ -73,6 +80,13 @@ thirtytwo.addEventListener('click', () => {
     for(let i = 0; i <= 16; i++){
         grid()
     }
+    block = document.querySelectorAll('.gridhost div');
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mouseover', () => {
+            block[i].style.background = 'black';
+        });
+      }
+    
 })
 
 sixtyfour.addEventListener('click', () => {
@@ -81,6 +95,13 @@ sixtyfour.addEventListener('click', () => {
     for(let i = 0; i <= 32; i++){
         grid()
     }
+    block = document.querySelectorAll('.gridhost div');
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mouseover', () => {
+            block[i].style.background = 'black';
+        });
+      }
+    
 })
 
 ninetysix.addEventListener('click', () => {
@@ -89,6 +110,13 @@ ninetysix.addEventListener('click', () => {
     for(let i = 0; i <= 48; i++){
         grid()
     }
+    block = document.querySelectorAll('.gridhost div');
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mouseover', () => {
+            block[i].style.background = 'black';
+        });
+      }
+    
 })
 
 
