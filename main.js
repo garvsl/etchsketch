@@ -7,7 +7,10 @@ let yellow = document.querySelector('.yellow')
 let black = document.querySelector('.black')
 let white = document.querySelector('.white')
 let clear = document.querySelector('.clear')
-
+let sixteen = document.querySelector('.sixteen')
+let thirtytwo = document.querySelector('.thirtytwo')
+let sixtyfour = document.querySelector('.sixtyfour')
+let ninetysix = document.querySelector('.ninetysix')
 
 function grid(){
     let div_one;
@@ -37,7 +40,6 @@ function grid(){
 }
 
 
-
 function blocks(amount){
     for(let i = 0; i <= amount; i++){
         grid()
@@ -45,9 +47,50 @@ function blocks(amount){
     
 }
 
+
 blocks(8);  
 
 let block = document.querySelectorAll('.gridhost div');
+
+let test = () => {
+    for(let i = 0; i < block.length; i++) {
+        block[i].remove(block[i]);
+    }
+}   
+
+
+sixteen.addEventListener('click', () => {
+    block = document.querySelectorAll('.gridhost div');
+    test();
+    for(let i = 0; i <= 8; i++){
+        grid()
+    }
+})
+
+thirtytwo.addEventListener('click', () => {
+    block = document.querySelectorAll('.gridhost div');
+    test();
+    for(let i = 0; i <= 16; i++){
+        grid()
+    }
+})
+
+sixtyfour.addEventListener('click', () => {
+    block = document.querySelectorAll('.gridhost div');
+    test();
+    for(let i = 0; i <= 32; i++){
+        grid()
+    }
+})
+
+ninetysix.addEventListener('click', () => {
+    block = document.querySelectorAll('.gridhost div');
+    test();
+    for(let i = 0; i <= 48; i++){
+        grid()
+    }
+})
+
 
 function color(col){
     for (let i = 0; i < block.length; i++) {

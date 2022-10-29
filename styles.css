@@ -13,7 +13,32 @@
     justify-content: center;
     margin-top:35px;
     gap:10px;
+     
 }
+
+.red{
+   box-shadow:0 0 5px red;
+}
+
+.blue{
+    box-shadow:0 0 5px blue;
+ }
+
+ .green{
+    box-shadow:0 0 5px green;
+ }
+
+ .yellow{
+    box-shadow:0 0 5px yellow;
+ }
+
+ .black{
+    box-shadow:0 0 5px black;
+ }
+
+ .white{
+    box-shadow:0 0 5px white;
+ }
 
 .gridsize{
     display:flex;
@@ -26,32 +51,26 @@
 body{
     margin:0px;
     padding-top:4%;
+    background-color:rgba(92, 92, 182, 0.459);
 
 }
 
 .gridhost div{
     border:0.5px solid black;
     padding:1%;
+    background-color:white;
 
 }
 
-.gridhost div:hover{
-    background-color:black;
-}
 
 .pagewrap{
-    display:flex;
-    flex-direction: column;
-
-   
 
 }
 
 .gridhost{
     display:flex;
     flex-direction: row;
-    justify-content: center;
-
+    
 
 
 
