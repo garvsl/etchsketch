@@ -11,7 +11,7 @@ let sixteen = document.querySelector('.sixteen')
 let thirtytwo = document.querySelector('.thirtytwo')
 let sixtyfour = document.querySelector('.sixtyfour')
 let ninetysix = document.querySelector('.ninetysix')
-
+let colo;
 
 function grid(){
     let div_one;
@@ -68,10 +68,29 @@ sixteen.addEventListener('click', () => {
     }
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
-            block[i].style.background = 'black';
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
+            block[i].style.background = colo;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = colo;
+
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 })
 
@@ -83,10 +102,29 @@ thirtytwo.addEventListener('click', () => {
     }
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
-            block[i].style.background = 'black';
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
+            block[i].style.background = colo;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = colo;
+
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 })
 
@@ -98,10 +136,29 @@ sixtyfour.addEventListener('click', () => {
     }
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
-            block[i].style.background = 'black';
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
+            block[i].style.background = colo;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = colo;
+
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 })
 
@@ -113,14 +170,33 @@ ninetysix.addEventListener('click', () => {
     }
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
-            block[i].style.background = 'black';
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
+            block[i].style.background = colo;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = colo;
+
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 })
 
-let testies;
+
 let tests;
 
 function color(col){
@@ -135,6 +211,7 @@ function color(col){
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = col;
+                    colo = col;
                     }
 
                 });
@@ -164,6 +241,7 @@ red.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'red';
+                    colo = 'red';
                     }
 
                 });
@@ -191,6 +269,7 @@ blue.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'blue';
+                    colo = 'blue'
                     }
 
                 });
@@ -217,6 +296,7 @@ green.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'green';
+                    colo = 'green';
                     }
 
                 });
@@ -243,6 +323,7 @@ yellow.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'yellow';
+                    colo = 'yellow';
                     }
 
                 });
@@ -269,6 +350,7 @@ black.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'black';
+                    colo = 'black';
                     }
 
                 });
@@ -295,6 +377,7 @@ white.addEventListener('click', () => {
                 block[i].addEventListener('mouseover', () => {
                     if(tests != true){
                     block[i].style.background = 'white';
+                    colo = 'white';
                     }
 
                 });
@@ -317,6 +400,7 @@ clear.addEventListener('click', () => {
 })
 
 color('black');
+
 
 
 /*
