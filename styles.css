@@ -52,8 +52,7 @@ body{
     margin:0px;
     padding-top:4%;
     background-color:rgba(92, 92, 182, 0.459);
-    padding-left:10%;
-    padding-right:10%;
+
 }
 
 .gridhost div{
@@ -61,18 +60,26 @@ body{
     border:0.5px solid black;
     padding:1%;
     background-color:white;
-    flex-grow: 1;
+    transition:0.5s ease;
+
+
 
 }
 
 
 .pagewrap{
+   
 
 }
+
+
 
 .gridhost{
     display:flex;
     flex-direction: row;
+    justify-content: center;
+    margin-left:20%;
+    margin-right:20%;
 
     
 

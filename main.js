@@ -12,6 +12,7 @@ let thirtytwo = document.querySelector('.thirtytwo')
 let sixtyfour = document.querySelector('.sixtyfour')
 let ninetysix = document.querySelector('.ninetysix')
 
+
 function grid(){
     let div_one;
     let div_two;
@@ -119,13 +120,33 @@ ninetysix.addEventListener('click', () => {
     
 })
 
+let testies;
+let tests;
 
 function color(col){
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = col;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = col;
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 }
 
@@ -133,55 +154,159 @@ function color(col){
 
 red.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'red';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'red';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 });   
 
 blue.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'blue';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'blue';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
-    
+
+
+        
+    }
 }); 
 
 green.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'green';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'green';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
-    
+
+
+        
+    }
 }); 
 
 yellow.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'yellow';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'yellow';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
-    
+
+
+        
+    }
 }); 
 
 black.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'black';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'black';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
-    
+
+
+        
+    }
 }); 
 
 white.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mouseover', () => {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
             block[i].style.background = 'white';
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = 'white';
+                    }
+
+                });
+                
+      
+            }
+        
         });
-      }
+
+
+        
+    }
     
 }); 
 
@@ -195,6 +320,9 @@ color('black');
 
 
 /*
+
+add  a mouse down that starts the hover
+and then a mouseup that removes it
 
 add start color, provide instructions add color pallete
 add an button which they can press to change the amount of blocks
