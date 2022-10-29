@@ -1,0 +1,59 @@
+@media screen and (max-width: 480px){
+
+    .gridhost div{
+        border:1px solid black;
+        padding:10%;
+
+    }
+
+}
+
+.buttons{
+    display:flex;
+    justify-content: center;
+    margin-top:35px;
+    gap:10px;
+}
+
+.gridsize{
+    display:flex;
+    justify-content: center;
+    margin-bottom:35px;
+    gap:10px;
+    
+}
+
+body{
+    margin:0px;
+    padding-top:4%;
+
+}
+
+.gridhost div{
+    border:0.5px solid black;
+    padding:1%;
+
+}
+
+.gridhost div:hover{
+    background-color:black;
+}
+
+.pagewrap{
+    display:flex;
+    flex-direction: column;
+
+   
+
+}
+
+.gridhost{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+
+
+  
+}
