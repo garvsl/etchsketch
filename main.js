@@ -255,15 +255,18 @@ function color(col){
 
 red.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'red';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'red';
                     colo = 'red';
                     }
@@ -272,7 +275,7 @@ red.addEventListener('click', () => {
                 
       
             }
-        
+            }
         });
 
 
@@ -283,24 +286,27 @@ red.addEventListener('click', () => {
 
 blue.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'blue';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'blue';
-                    colo = 'blue'
+                    colo = 'blue';
                     }
 
                 });
                 
       
             }
-        
+            }
         });
 
 
@@ -308,19 +314,22 @@ blue.addEventListener('click', () => {
     }
 }); 
 
-    
+
 
 green.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'green';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'green';
                     colo = 'green';
                     }
@@ -329,7 +338,7 @@ green.addEventListener('click', () => {
                 
       
             }
-        
+            }
         });
 
 
@@ -339,15 +348,18 @@ green.addEventListener('click', () => {
 
 yellow.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'yellow';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'yellow';
                     colo = 'yellow';
                     }
@@ -356,7 +368,7 @@ yellow.addEventListener('click', () => {
                 
       
             }
-        
+            }
         });
 
 
@@ -366,15 +378,18 @@ yellow.addEventListener('click', () => {
 
 black.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'black';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'black';
                     colo = 'black';
                     }
@@ -383,7 +398,7 @@ black.addEventListener('click', () => {
                 
       
             }
-        
+            }
         });
 
 
@@ -393,15 +408,18 @@ black.addEventListener('click', () => {
 
 white.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
             tests = false;
             block[i].style.background = 'white';
             for (let i = 0; i < block.length; i++) {   
                 block[i].addEventListener('mouseup', () => {
                     tests = true;
                 });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
                     block[i].style.background = 'white';
                     colo = 'white';
                     }
@@ -410,20 +428,29 @@ white.addEventListener('click', () => {
                 
       
             }
-        
+            }
         });
 
 
         
     }
-    
 }); 
 
-clear.addEventListener('click', () => {
+clear.addEventListener('mousedown', () => {
     for (let i = 0; i < block.length; i++) {
+        block[i].style.transition = '1s';
         block[i].style.background = 'white';
     }
+
 })
+clear.addEventListener('mouseup', () => {
+    for(let i = 0; i < block.length; i++){
+        if(block[i].style.background == 'white'){
+            block[i].style.transition = '0s';
+        }
+    }   
+});
+
 
 color('black');
 
