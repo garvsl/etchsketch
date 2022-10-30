@@ -14,7 +14,7 @@ let sixtyfour = document.querySelector('.sixtyfour');
 let ninetysix = document.querySelector('.ninetysix');
 let colo = 'black';
 let rainbow = document.querySelector('.rainbow');
-
+let noborders = document.querySelector('.borders');
 
 function grid(row_amount, max){
     let div_one;
@@ -199,6 +199,29 @@ ninetysix.addEventListener('click', () => {
     
 })
 
+let nobod = false;
+noborders.addEventListener('mousedown', () => {
+    block = document.querySelectorAll('.gridhost div');
+    if(nobod == true){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.borderTop = '0.1px solid rgb(139, 139, 139)'
+            block[i].style.borderRight = '0.1px solid rgb(139, 139, 139)'
+        }
+        nobod = false;
+        noborders.textContent = 'Borders Off';
+    }else if (nobod == false){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.border = '0';
+        }
+        nobod = true;
+        noborders.textContent = 'Borders On';
+    }
+
+    
+
+    
+});
+
 
 let tests;
 
@@ -358,6 +381,54 @@ yellow.addEventListener('click', () => {
     }
 }); 
 
+rainbow.addEventListener('click', () => {
+
+    let x = Math.floor(Math.random() * 255);
+    let y = Math.floor(Math.random() * 255);
+    let z = Math.floor(Math.random() * 255);
+    let rgb = `rgb(${x}, ${y}, ${z})`
+
+
+
+    
+
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mousedown' , (e) =>  {
+            if(e.button == 0){
+                
+            
+            tests = false;
+            x = Math.floor(Math.random() * 255);
+            y = Math.floor(Math.random() * 255);
+            z = Math.floor(Math.random() * 255);
+            rgb = `rgb(${x}, ${y}, ${z})`
+            block[i].style.background = rgb;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', (e) => {
+                    if(tests != true && e.button == 0){
+                    x = Math.floor(Math.random() * 255);
+                    y = Math.floor(Math.random() * 255);
+                    z = Math.floor(Math.random() * 255);
+                    rgb = `rgb(${x}, ${y}, ${z})`
+                    block[i].style.background = rgb;
+                    colo = 'black'
+                    }
+
+                });
+                
+      
+            }
+            }
+        });
+
+
+        
+    }
+}); 
+
 black.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
@@ -468,5 +539,19 @@ add an button which they can press to change the amount of blocks
 
 add  a mouse down that starts the hover
 and then a mouseup that removes it
+
+replace the buttons with designs
+
+for example replace red with a div that is red
+
+and have its border radius up so it looks like a circle
+
+for eraser get an eraser png
+
+and change opacity of the buttons when they are pressed
+
+for the rest just have regular buttons
+
+move them to left and right
 
 */
