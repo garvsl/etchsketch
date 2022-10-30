@@ -116,7 +116,9 @@ thirtytwo.addEventListener('click', () => {
     test();
     for(let i = 0; i <= 16; i++){
         grid()
+
     }
+
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , () =>  {
@@ -305,6 +307,8 @@ blue.addEventListener('click', () => {
         
     }
 }); 
+
+    
 
 green.addEventListener('click', () => {
     for (let i = 0; i < block.length; i++) {

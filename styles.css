@@ -21,20 +21,42 @@
 @media screen and (min-width: 800px){
     .box{
         display:flex;       
-        border:0.5px solid rgba(190, 190, 190, 0.575);   
         background-color:white;
         transition:0.5s ease;
         flex:1;
-    
+        border-top:0.1px solid rgb(139, 139, 139);
+        border-right:0.1px solid rgb(139, 139, 139);
 
     }
+    .gridhost{
+        display:flex;   
+        justify-content: center;
+        flex:1;
+    
+        
+    }
+    
+}
+
+#pagewrap{
+    display:flex;
+    flex-direction: column;
+    gap:0px;
+    margin:0px;
+    padding:0px;
+    border:15px solid black;
+    box-shadow:0px 0px 10px black;
+    border-radius: 15px;
+    width:600px;
+    height:600px;
+
 }
 
 body{
     margin:0px;
     padding-top:2%;
     background-color:rgba(92, 92, 182, 0.459);
-    height:100vh;
+
 }
 
 #completewrap{
@@ -44,26 +66,9 @@ body{
 
 }
 
-#pagewrap{
-    display:flex;
-    flex-direction: column;
-    border:15px solid black;
-    box-shadow:0px 0px 10px black;
-    border-radius: 15px;
-    width:600px;
-    height:600px;
-
-}
 
 
-.gridhost{
-    display:flex;   
-    justify-content: center;
-    flex-grow:1;
 
-
-    
-}
 
 *{
     user-select: none;
