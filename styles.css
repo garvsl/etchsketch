@@ -37,6 +37,20 @@
     
 }
 
+@keyframes colorchange {
+    0% {box-shadow:0px 0px 5px red}
+    25% {box-shadow:0px 0px 5px blue}
+    50% {box-shadow:0px 0px 5px green}
+    75% {box-shadow:0px 0px 5px yellow}
+    100% {box-shadow:0px 0px 5px red}
+}
+
+.rainbow{
+    animation-name:colorchange;
+    animation-duration:6s;
+    animation-iteration-count: infinite;
+}
+
 #pagewrap{
     display:flex;
     flex-direction: column;

@@ -1,49 +1,38 @@
 
-let pagewrap = document.querySelector('#pagewrap')
+let pagewrap = document.querySelector('#pagewrap');
 pagewrap.setAttribute('draggable', 'false');
-let red = document.querySelector('.red')
-let blue = document.querySelector('.blue')
-let green = document.querySelector('.green')
-let yellow = document.querySelector('.yellow')
-let black = document.querySelector('.black')
-let white = document.querySelector('.white')
-let clear = document.querySelector('.clear')
-let sixteen = document.querySelector('.sixteen')
-let thirtytwo = document.querySelector('.thirtytwo')
-let sixtyfour = document.querySelector('.sixtyfour')
-let ninetysix = document.querySelector('.ninetysix')
+let red = document.querySelector('.red');
+let blue = document.querySelector('.blue');
+let green = document.querySelector('.green');
+let yellow = document.querySelector('.yellow');
+let black = document.querySelector('.black');
+let white = document.querySelector('.white');
+let clear = document.querySelector('.clear');
+let sixteen = document.querySelector('.sixteen');
+let thirtytwo = document.querySelector('.thirtytwo');
+let sixtyfour = document.querySelector('.sixtyfour');
+let ninetysix = document.querySelector('.ninetysix');
 let colo = 'black';
+let rainbow = document.querySelector('.rainbow');
 
 
-function grid(){
+function grid(row_amount, max){
     let div_one;
     let div_two;
-    let number = 0
-    while(number <= 32){
+    let number = 0;
+    while(number <= row_amount){
         if(number == 0){
             div_one = document.createElement('div');
             div_one.className = 'gridhost';
             div_one.setAttribute('draggable', 'false');
             pagewrap.appendChild(div_one);
         }
-        if(number < 16){
+        if(number <= row_amount){
             const piece = document.createElement('div');
             piece.classList.add('box');
             piece.setAttribute('draggable', 'false');
             div_one.appendChild(piece);
 
-        }
-        if(number == 16){
-            div_two = document.createElement('div');
-            div_two.setAttribute('draggable', 'false');
-            div_two.className = 'gridhost';
-            pagewrap.appendChild(div_two);
-        }
-        if(number <= 32 && number > 16){
-            const piece = document.createElement('div');
-            piece.classList.add('box');
-            piece.setAttribute('draggable', 'false');
-            div_two.appendChild(piece);
         }
 
 
@@ -51,16 +40,17 @@ function grid(){
     }
 }
 
-
-function blocks(amount){
-    for(let i = 0; i <= amount; i++){
-        grid()
+//numbers of columns
+function blocks(row, column){
+    for(let i = 0; i <= column; i++){
+        //number of items in a row
+        grid(row);
     }
     
 }
 
 
-blocks(8);  
+blocks(15, 15);  
 
 let block = document.querySelectorAll('.gridhost div');
 let blocker = document.querySelectorAll('.gridhost');
@@ -79,9 +69,7 @@ sixteen.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
-    for(let i = 0; i <= 8; i++){
-        grid()
-    }
+    blocks(15, 15);  
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , () =>  {
@@ -114,10 +102,8 @@ thirtytwo.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
-    for(let i = 0; i <= 16; i++){
-        grid()
+    blocks(31, 31);  
 
-    }
 
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
@@ -151,9 +137,7 @@ sixtyfour.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
-    for(let i = 0; i <= 32; i++){
-        grid()
-    }
+    blocks(63, 63);  
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , () =>  {
@@ -186,9 +170,7 @@ ninetysix.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
-    for(let i = 0; i <= 48; i++){
-        grid()
-    }
+    blocks(95, 95);  
     block = document.querySelectorAll('.gridhost div');
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , () =>  {
