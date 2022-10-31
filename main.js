@@ -540,6 +540,12 @@ add an button which they can press to change the amount of blocks
 add  a mouse down that starts the hover
 and then a mouseup that removes it
 
+
+
+have background be a gradient
+
+add a title/header and a footer
+
 replace the buttons with designs
 
 for example replace red with a div that is red
@@ -554,4 +560,12 @@ for the rest just have regular buttons
 
 move them to left and right
 
+mobile support
+
+when switching grid noborders gets turned off, fix that 
+
+when a button is pressed change its color and then when another is pressed set all 
+buttons back to original color
+
+and grid size
 */
