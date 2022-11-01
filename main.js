@@ -9,12 +9,13 @@ let black = document.querySelector('.black');
 let white = document.querySelector('.white');
 let clear = document.querySelector('.clear');
 let sixteen = document.querySelector('.sixteen');
+let twentyfour = document.querySelector('.twentyfour');
 let thirtytwo = document.querySelector('.thirtytwo');
 let sixtyfour = document.querySelector('.sixtyfour');
-let ninetysix = document.querySelector('.ninetysix');
 let colo = 'black';
 let rainbow = document.querySelector('.rainbow');
 let noborders = document.querySelector('.borders');
+let nobod = false;
 
 function grid(row_amount, max){
     let div_one;
@@ -66,6 +67,12 @@ let test = () => {
 
 
 sixteen.addEventListener('click', () => {
+
+    sixteen.style.boxShadow = "0px 0px 5px black"; 
+    twentyfour.style.boxShadow = "0px 0px 0px black"; 
+    thirtytwo.style.boxShadow = "0px 0px 0px black"; 
+    sixtyfour.style.boxShadow = "0px 0px 0px black"; 
+
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
@@ -95,14 +102,30 @@ sixteen.addEventListener('click', () => {
 
         
     }
+
+    block = document.querySelectorAll('.gridhost div');
+    if(nobod == true){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.border = '0';
+        }
+        noborders.textContent = 'Borders On';
+    }
     
 })
 
-thirtytwo.addEventListener('click', () => {
+
+
+twentyfour.addEventListener('click', () => {
+
+    twentyfour.style.boxShadow = "0px 0px 5px black"; 
+    sixteen.style.boxShadow = "0px 0px 0px black"; 
+    thirtytwo.style.boxShadow = "0px 0px 0px black"; 
+    sixtyfour.style.boxShadow = "0px 0px 0px black"; 
+
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
-    blocks(31, 31);  
+    blocks(23, 23);  
 
 
     block = document.querySelectorAll('.gridhost div');
@@ -130,10 +153,71 @@ thirtytwo.addEventListener('click', () => {
 
         
     }
+
+    block = document.querySelectorAll('.gridhost div');
+    if(nobod == true){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.border = '0';
+        }
+        noborders.textContent = 'Borders On';
+    }
+    
+})
+
+thirtytwo.addEventListener('click', () => {
+
+    thirtytwo.style.boxShadow = "0px 0px 5px black"; 
+    twentyfour.style.boxShadow = "0px 0px 0px black"; 
+    sixteen.style.boxShadow = "0px 0px 0px black"; 
+    sixtyfour.style.boxShadow = "0px 0px 0px black"; 
+
+    block = document.querySelectorAll('.gridhost div');
+    blocker = document.querySelectorAll('.gridhost');
+    test();
+    blocks(31, 31);  
+    block = document.querySelectorAll('.gridhost div');
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener('mousedown' , () =>  {
+            tests = false;
+            block[i].style.background = colo;
+            for (let i = 0; i < block.length; i++) {   
+                block[i].addEventListener('mouseup', () => {
+                    tests = true;
+                });       
+                block[i].addEventListener('mouseover', () => {
+                    if(tests != true){
+                    block[i].style.background = colo;
+
+                    }
+
+                });
+                
+      
+            }
+        
+        });
+
+
+        
+    }
+
+    block = document.querySelectorAll('.gridhost div');
+    if(nobod == true){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.border = '0';
+        }
+        noborders.textContent = 'Borders On';
+    }
     
 })
 
 sixtyfour.addEventListener('click', () => {
+
+    sixtyfour.style.boxShadow = "0px 0px 5px black"; 
+    twentyfour.style.boxShadow = "0px 0px 0px black"; 
+    thirtytwo.style.boxShadow = "0px 0px 0px black"; 
+    sixteen.style.boxShadow = "0px 0px 0px black"; 
+
     block = document.querySelectorAll('.gridhost div');
     blocker = document.querySelectorAll('.gridhost');
     test();
@@ -163,43 +247,18 @@ sixtyfour.addEventListener('click', () => {
 
         
     }
-    
-})
 
-ninetysix.addEventListener('click', () => {
     block = document.querySelectorAll('.gridhost div');
-    blocker = document.querySelectorAll('.gridhost');
-    test();
-    blocks(95, 95);  
-    block = document.querySelectorAll('.gridhost div');
-    for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener('mousedown' , () =>  {
-            tests = false;
-            block[i].style.background = colo;
-            for (let i = 0; i < block.length; i++) {   
-                block[i].addEventListener('mouseup', () => {
-                    tests = true;
-                });       
-                block[i].addEventListener('mouseover', () => {
-                    if(tests != true){
-                    block[i].style.background = colo;
-
-                    }
-
-                });
-                
-      
-            }
-        
-        });
-
-
-        
+    if(nobod == true){
+        for(let i = 0; i < block.length; i++){
+            block[i].style.border = '0';
+        }
+        noborders.textContent = 'Borders On';
     }
     
 })
 
-let nobod = false;
+
 noborders.addEventListener('mousedown', () => {
     block = document.querySelectorAll('.gridhost div');
     if(nobod == true){
@@ -226,6 +285,16 @@ noborders.addEventListener('mousedown', () => {
 let tests;
 
 function color(col){
+    
+    changeColor(black);
+    
+    removeColor(blue)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(red)
+    removeColor(rainbow)
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -258,7 +327,39 @@ function color(col){
 
 
 
+function removeColor(colore){
+    colore.classList.remove('whiteborder')
+    colore.classList.remove('blackborder')
+}
+
+function changeColor(colore){
+    colore.classList.add('whiteborder')
+    
+}
+
+
+
+
 red.addEventListener('click', () => {
+
+    red.classList.remove('trans');
+    red.addEventListener('mouseout', () => {red.classList.add('trans');})
+
+    changeColor(red);
+
+    removeColor(black)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(blue)
+    removeColor(rainbow)
+
+    
+
+   
+
+    
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -286,10 +387,31 @@ red.addEventListener('click', () => {
 
         
     }
+
+    
+
+    
     
 });   
 
 blue.addEventListener('click', () => {
+
+    blue.classList.remove('trans');
+    blue.addEventListener('mouseout', () => {blue.classList.add('trans');})
+
+    changeColor(blue);
+    
+    removeColor(black)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(red)
+    removeColor(rainbow)
+
+    
+
+   
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -322,6 +444,19 @@ blue.addEventListener('click', () => {
 
 
 green.addEventListener('click', () => {
+
+    green.classList.remove('trans');
+    green.addEventListener('mouseout', () => {green.classList.add('trans');})
+
+    changeColor(green);
+
+    removeColor(black)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(red)
+    removeColor(blue)
+    removeColor(rainbow)
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -352,6 +487,19 @@ green.addEventListener('click', () => {
 }); 
 
 yellow.addEventListener('click', () => {
+
+    yellow.classList.remove('trans');
+    yellow.addEventListener('mouseout', () => {yellow.classList.add('trans');})
+
+    changeColor(yellow);
+
+    removeColor(black)
+    removeColor(white)
+    removeColor(red)
+    removeColor(green)
+    removeColor(blue)
+    removeColor(rainbow)
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -381,7 +529,21 @@ yellow.addEventListener('click', () => {
     }
 }); 
 
+
+
 rainbow.addEventListener('click', () => {
+
+    rainbow.classList.remove('trans');
+    rainbow.addEventListener('mouseout', () => {rainbow.classList.add('trans');})
+
+    changeColor(rainbow);
+
+    removeColor(black)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(blue)
+    removeColor(red)
 
     let x = Math.floor(Math.random() * 255);
     let y = Math.floor(Math.random() * 255);
@@ -430,6 +592,19 @@ rainbow.addEventListener('click', () => {
 }); 
 
 black.addEventListener('click', () => {
+
+    black.classList.remove('trans');
+    black.addEventListener('mouseout', () => {black.classList.add('trans');})
+
+    changeColor(black);
+
+    removeColor(red)
+    removeColor(white)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(blue)
+    removeColor(rainbow)
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -460,6 +635,19 @@ black.addEventListener('click', () => {
 }); 
 
 white.addEventListener('click', () => {
+
+    white.classList.remove('trans');
+    white.addEventListener('mouseout', () => {white.classList.add('trans');})
+
+    white.classList.add('blackborder');
+
+    removeColor(black)
+    removeColor(red)
+    removeColor(yellow)
+    removeColor(green)
+    removeColor(blue)
+    removeColor(rainbow)
+
     for (let i = 0; i < block.length; i++) {
         block[i].addEventListener('mousedown' , (e) =>  {
             if(e.button == 0){
@@ -506,6 +694,7 @@ clear.addEventListener('mouseup', () => {
 
 
 color('black');
+sixteen.style.boxShadow = "0px 0px 5px black"; 
 
 
 
@@ -542,27 +731,7 @@ and then a mouseup that removes it
 
 
 
-have background be a gradient
-
-add a title/header and a footer
-
-replace the buttons with designs
-
-for example replace red with a div that is red
-
-and have its border radius up so it looks like a circle
-
-for eraser get an eraser png
-
 and change opacity of the buttons when they are pressed
-
-for the rest just have regular buttons
-
-move them to left and right
-
-mobile support
-
-when switching grid noborders gets turned off, fix that 
 
 when a button is pressed change its color and then when another is pressed set all 
 buttons back to original color
