@@ -737,4 +737,11 @@ when a button is pressed change its color and then when another is pressed set a
 buttons back to original color
 
 and grid size
+
+add a brush png
+
+and when it is clicked the colors come out
+
+add a fill button
+
 */
