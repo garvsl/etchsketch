@@ -742,6 +742,12 @@ add a brush png
 
 and when it is clicked the colors come out
 
+add the brush to the gui and make the rest have short height
+
+and when pressed increase it
+
 add a fill button
+
+if the color is rainbow and u swithc grid change the color back to black
 
 */
