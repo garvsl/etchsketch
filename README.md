@@ -1,6 +1,6 @@
 # EtchSketch!
 
-[live demo here](https://garvsl.github.io/etchsketch/)
+[Click For Live Demo](https://garvsl.github.io/etchsketch/)
 
 ## Introduction
 
