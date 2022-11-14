@@ -4,7 +4,7 @@
 
 ## Introduction
 
-The EtchSketch, which is named after one of my childhood favorite drawing games. This game is on a github hosted website and on it you can easily switch between colors, grid sizes, and other features, which allow you to create and draw beautiful art. 
+The EtchSketch, which is named after one of my childhood favorite games, is an amazing drawing gaming. It is on a github hosted website and on it you can easily switch between colors, grid sizes, and other features, which allow you to create and draw beautiful art. 
 
 ## My troubles
 
