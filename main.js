@@ -677,14 +677,14 @@ white.addEventListener('click', () => {
     }
 }); 
 
-clear.addEventListener('keydown input', () => {
+clear.addEventListener('mousedown', () => {
     for (let i = 0; i < block.length; i++) {
         block[i].style.transition = '1s';
         block[i].style.background = 'white';
     }
 
 })
-clear.addEventListener('keyup input', () => {
+clear.addEventListener('mouseup', () => {
     for(let i = 0; i < block.length; i++){
         if(block[i].style.background == 'white'){
             block[i].style.transition = '0s';
